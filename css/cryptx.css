@@ -1,0 +1,211 @@
+@font-face {
+	font-family: 'Junction';
+	src: url('../fonts/junction/junction-webfont.eot');
+	src: url('../fonts/junction/junction-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/junction/junction-webfont.woff') format('woff'), url('../fonts/junction/junction-webfont.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+body {
+	background: #2980b9;
+}
+
+.clear {
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+#header {
+	background-color: #000;
+	width: 100%;
+	height: 100px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#content-area {
+	margin-top: 8%;
+}
+
+.cryptx-header {
+	color: #fff;
+	font-family: "Junction", Helvetical, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+#frequency-graph {
+	width: 100%;
+	margin-top: 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.graphFieldfrequency-graph {
+	color: #fff;
+}
+
+#ngraphs-helper {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#getngraphs-btn {
+	width: 15%;
+	float: left;
+}
+
+#ngraphs-length {
+	width: 50px;
+	float: left;
+	margin-right: 15px;
+}
+
+#vigenere-key {
+	width: 90%;
+	float: left;
+	margin-right: 15px;
+}
+
+#vkey-btn-e {
+	width: 15%;
+	float: left;
+}
+
+#vkey-e {
+	width: 35%;
+	float: left;
+	margin-right: 15px;
+}
+
+table {
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+	table-layout: fixed;
+	color: #fff;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+th, td {
+	text-align: center;
+}
+
+tr:nth-child(even) {
+	background: #27ae60;
+}
+
+#affine-controls {
+	display: inline;
+}
+
+#affine-controls span {
+	color: #fff;
+	display: inline-block;
+	padding: 0 10px 0 5px;
+}
+
+h3.title {
+	font-size: 24.5px !important;
+}
+
+.title {
+	line-height: 40px !important;
+	margin-top: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+#mult-shift, #add-shift {
+	float: left;
+	width: 50%;
+}
+
+#add-e, #add-shift .title {
+	margin-left: 25px;
+}
+
+#add-d, #add-e {
+	width: 45px;
+	float: left;
+	margin-left: 25px;
+}
+
+#affine-encipher, #affine-decipher {
+	float: left;
+	margin-left: 15px;
+}
+
+.cryptx-form {
+
+}
+
+#affine-decipher-res p, #affine-encipher-res p {
+	color: #fff;
+	font-size: 25px;
+}
+
+#affinept {
+	width: 95px;
+	float: left;
+}
+
+#affinept-btn {
+	float: left;
+	margin-left: 15px;
+}
+
+#vkey-d, #vkey-e {
+	width: 35%;
+	float: left;
+}
+
+#vkey-btn-d, #vkey-btn-e {
+	width: 10%;
+	float: left;
+	margin-left: 15px;
+}
+
+#vres-d, #vres-e {
+	padding-top: 15px;
+	color: #fff;
+	font-size: 25px;
+}
+
+li a {
+	color: #fff !important;
+}
+
+#ngraphsout {
+	margin-top: 15px;
+}
+
+#frequency-graph {
+	margin-top: 25px;
+}
+
+#runalphaout {
+	margin-bottom: 35px;
+}
+
+.radio-lbl {
+	font-size: 16px;
+	color: #fff;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+input[type=radio] {
+	margin-left: 5px;
+}
+
+#affine-pts {
+	color: #fff;
+	margin-top: 15px;
+}

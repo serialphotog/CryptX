@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CryptX - Free Cryptology Helper Tool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/flat-ui.css" rel="stylesheet">
+	<link href="css/cryptx.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div id="header">
+		<div class="navbar">
+			<div class="navbar-header">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse-01"></button>
+			</div>
+			<div class="navbar-collapse collapse navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="#text-toggle">Message</a>
+						<ul>
+							<li><a href="#text-toggle">Text</a></li>
+							<li><a href="#frequency-toggle">Frequencies</a></li>
+							<li><a href="#n-graphs-toggle">N-Graphs</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Decrypt</a>
+						<ul>
+							<li><a href="#runalpha-toggle">Run the Alphabet</a></li>
+							<li><a href="#affinedecipher-toggle">Affine Cipher</a></li>
+							<li><a href="#affineknownpt-toggle">Affine Known Plaintext Attack</a></li>
+							<li><a href="#vigeneredecipher-toggle">Vigenere Cipher</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Encrypt</a>
+						<ul>
+							<li><a href="#affineencipher-toggle">Affine Cipher</a></li>
+							<li><a href="#vigenereencipher-toggle">Vigenere Cipher</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		
+		<div id="content-area">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="text" class="cryptx-section">
+					<div class="cryptx-section-inner">
+					
+						<div class="form-group">
+							<h4 class="cryptx-header">Message:</h4>
+							<textarea class="form-control" id="cryptx-message"></textarea>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="frequency" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="frequency-graph">
+
+						</div>
+					</div>
+				</div>
+
+				<div id="n-graphs" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="ngraphs-helper">
+							<input type="text" class="form-control" id="ngraphs-length"> <a href="#" id="getngraphs-btn" class="btn btn-block btn-lg btn-inverse">Get N-Graphs</a>
+							<div class="clear"></div>
+						</div>
+
+						<div id="ngraphsout">
+
+						</div>
+
+					</div>
+				</div>
+
+				<div id="runalpha" class="cryptx-section">
+					<div class="cryptx-section-inner">
+
+						<div id="runalphaout">
+
+						</div>
+
+					</div>
+				</div>
+
+				<div id="affinedecipher" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="affine-controls">
+								<div id="mult-shift">
+									<h3 class="title">Multiplicative Shift</h3>
+									<input type="radio" name="multiply-d" value="1"><label class="radio-lbl">1</label>
+									<input type="radio" name="multiply-d" value="3"><label class="radio-lbl">3</label>
+									<input type="radio" name="multiply-d" value="5"><label class="radio-lbl">5</label>
+									<input type="radio" name="multiply-d" value="7"><label class="radio-lbl">7</label>
+									<input type="radio" name="multiply-d" value="9"><label class="radio-lbl">9</label>
+									<input type="radio" name="multiply-d" value="11"><label class="radio-lbl">11</label>
+									<input type="radio" name="multiply-d" value="15"><label class="radio-lbl">15</label>
+									<input type="radio" name="multiply-d" value="17"><label class="radio-lbl">17</label>
+									<input type="radio" name="multiply-d" value="19"><label class="radio-lbl">19</label>
+									<input type="radio" name="multiply-d" value="21"><label class="radio-lbl">21</label>
+									<input type="radio" name="multiply-d" value="23"><label class="radio-lbl">23</label>
+									<input type="radio" name="multiply-d" value="25"><label class="radio-lbl">25</label>
+								</div>
+								<div id="add-shift">
+									<h3 class="title">Additive Shift</h3>
+									<div id="cryptx-form"><input type="text" id="add-d" class="form-control"> <button class="btn btn-md btn-inverse" id="affine-decipher">Decipher</button></div>
+								</div>
+							</div>
+							<h3 class="title">Result</h3>
+							<div id="affine-decipher-res"> </div>
+					</div>
+				</div>
+
+				<div id="affineknownpt" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="affine-controls">
+							<h3 class="title">Affine Known Plaintxt Attack</h3>
+							<div id="cryptx-form"><input type="text" id="affinept" class="form-control"> <button class="btn btn-md btn-info" id="affinept-btn">Attack</button></div>
+							<div class="clear"></div>
+						</div>
+						<div id="affine-pts"> </div>
+					</div>
+				</div>
+
+				<div id="affineencipher" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="affine-controls">
+								<div id="mult-shift">
+									<h3 class="title">Multiplicative Shift</h3>
+									<input type="radio" name="multiply-e" value="1"><label class="radio-lbl">1</label>
+									<input type="radio" name="multiply-e" value="3"><label class="radio-lbl">3</label>
+									<input type="radio" name="multiply-e" value="5"><label class="radio-lbl">5</label>
+									<input type="radio" name="multiply-e" value="7"><label class="radio-lbl">7</label>
+									<input type="radio" name="multiply-e" value="9"><label class="radio-lbl">9</label>
+									<input type="radio" name="multiply-e" value="11"><label class="radio-lbl">11</label>
+									<input type="radio" name="multiply-e" value="15"><label class="radio-lbl">15</label>
+									<input type="radio" name="multiply-e" value="17"><label class="radio-lbl">17</label>
+									<input type="radio" name="multiply-e" value="19"><label class="radio-lbl">19</label>
+									<input type="radio" name="multiply-e" value="21"><label class="radio-lbl">21</label>
+									<input type="radio" name="multiply-e" value="23"><label class="radio-lbl">23</label>
+									<input type="radio" name="multiply-e" value="25"><label class="radio-lbl">25</label>
+								</div>
+								<div id="add-shift">
+									<h3 class="title">Additive Shift</h3>
+									<input type="text" class="form-control" id="add-e"> <button class="btn btn-md btn-primary" id="affine-encipher">Encipher</button>
+								</div>
+							</div>
+							<h3 class="title">Result</h3>
+							<div id="affine-encipher-res"> </div>
+						</div>
+					</div>
+				</div>
+
+				<div id="vigenereencipher" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div id="vigenere-key">
+							<input type="text" class="form-control" id="vkey-e"> <a href="#" id="vkey-btn-e" class="btn btn-block btn-lg btn-inverse">Encipher</a>
+							<div class="clear"></div>
+							<div id="vres-e"> </div>
+						</div>
+					</div>
+				</div>
+
+				<div id="vigeneredecipher" class="cryptx-section">
+					<div class="cryptx-section-inner">
+						<div class="cryptx-form"><input type="text" class="form-control" id="vkey-d"> <a href="#" id="vkey-btn-d" class="btn btn-block btn-md btn-inverse">Decipher</a></div>
+						<div class="clear"></div>
+						<div id="vres-d"> </div>
+					</div>
+				</div>
+
+				<div id="vigenere-ciphertext-pairs" class="cryptx-section">
+					<div class="cryptx-section-inner">
+					<div id="vpairs"> </div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/bootstrap-switch.js"></script>
+	<script src="js/flatui-checkbox.js"></script>
+	<script src="js/flatui-radio.js"></script>
+	<script src="js/jquery.tagsinput.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/jquery.stacktable.js"></script>
+	<script src="js/application.js"></script>
+	<script src="js/jqBarGraph.1.1.min.js"></script>
+
+	<script src="js/cryptx.js"></script>
+	<script src="js/ui.js"></script>
+</body>
+</html>
